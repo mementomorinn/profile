@@ -48,11 +48,204 @@
         </div>
       </section>
       <section class="settings">
-        <div class="section_title">Profile</div>
+        <div class="section_title">Devices and Sessions</div>
         <div class="settings_content">
-          <div class="content_top"></div>
+          <div class="devices_top">
+            <div class="verification_flex">
+              <div class="verification">Current session:</div>
+              <div class="text"></div>
+            </div>
+            <div class="verification">Sessions:</div>
+            <div class="table_sessions">
+              <table>
+                <tr>
+                  <td class="table_head">Date/Time</td>
+                  <td class="table_head">Device</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="settings">
+        <div class="section_title">Security</div>
+        <div class="settings_content">
+          <div class="security">
+            <div class="security_title">Email verify</div>
+            <input type="text" placeholder="Email" />
+            <div class="buttons_flex">
+              <button>Verify</button>
+              <button>Change</button>
+              <button>Re-send code</button>
+            </div>
+            <div class="verification_flex">
+              <div class="verification">Verification code:</div>
+              <input type="num" placeholder="XXXXXX" />
+            </div>
+            <div class="warning">
+              Attention! Unverified Email! <br />
+              An account with an unverified email may be deleted.
+            </div>
+          </div>
+          <div class="security">
+            <div class="security_title password">Password change</div>
+            <input type="text" placeholder="Password" />
+            <div class="buttons_flex">
+              <button>Change</button>
+              <button>Re-send code</button>
+            </div>
+            <div class="verification_flex">
+              <div class="verification">Verification code:</div>
+              <input type="num" placeholder="XXXXXX" />
+            </div>
+            <div class="warning">
+              Password must have:<br />- a minimum of 5 characters <br />-
+              uppercase and lowercase letters <br />- a number <br />- your
+              password cannot match your email address
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="settings">
+        <div class="section_title">Account</div>
+        <div class="account_content">
+          <div class="titles_flex">
+            <div
+              class="settings_titles layouts"
+              id="title-layouts"
+              onclick="changeTable('plugins', 'layouts')"
+            >
+              Layouts
+            </div>
+            <div
+              class="settings_titles"
+              id="title-plugins"
+              onclick="changeTable('layouts', 'plugins')"
+            >
+              Plugins
+            </div>
+          </div>
+          <div class="table_layout" id="table-layouts">
+            <table>
+              <tr>
+                <td class="table_head">Application</td>
+                <td class="table_head">Layuot name</td>
+                <td class="table_head">Description</td>
+                <td class="table_head">Created</td>
+                <td class="table_head">Shared</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+            </table>
+          </div>
+          <div class="table_plugins" id="table-plugins">
+            <table>
+              <tr>
+                <td class="table_head">Plugin name</td>
+                <td class="table_head">Layuot name</td>
+                <td class="table_head">Created</td>
+                <td class="table_head">Shared</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </section>
+      <section class="settings">
+        <div class="section_title">Billing</div>
+        <div class="settings_content billing">
+          <div class="verification_flex">
+            <div class="verification">Your balance:</div>
+            <div class="verification">0.00</div>
+            <button class="change_btn">Top up</button>
+          </div>
+          <div class="table_sessions">
+            <table>
+              <tr>
+                <td class="table_head">Date/Time</td>
+                <td class="table_head">Paiment</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </section>
+      <section class="settings">
+        <div class="section_title">Preference</div>
+        <div class="settings_content preference">
+          <div class="security">
+            <div class="security_title viev">Viev</div>
+            <div class="verification_flex verif_grid">
+              <div class="verification">Dark theme:</div>
+              <button class="change_btn">Turn off</button>
+            </div>
+          </div>
+          <div class="security">
+            <div class="security_title translater">Translater</div>
+            <div class="verification_flex verif_grid">
+              <div class="verification">Language translate:</div>
+              <div class="dropdown">
+                <div class="language_flex">
+                  <div class="language">German</div>
+                  <div class="btn_open_menu dropbtn">&#x2228;</div>
+                </div>
+
+                <div class="dropdown-content">
+                  <p>language1</p>
+                  <p>language2</p>
+                  <p>language3</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="security">
+            <div class="security_title android">Android</div>
+            <div class="verification_flex verif_grid">
+              <div class="verification">Time attention:</div>
+              <div class="number_flex">
+                <div class="number">5</div>
+                <div class="plus_and_minus">
+                  <div class="btn_plus">&#8743;</div>
+                  <div class="btn_minus">&#x2228;</div>
+                </div>
+              </div>
+              <div class="verification">Bright attention:</div>
+              <div class="number_flex">
+                <div class="number">6</div>
+                <div class="plus_and_minus">
+                  <div class="btn_plus">&#8743;</div>
+                  <div class="btn_minus">&#x2228;</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="security">
+            <div class="security_title manager">Clipboard manager</div>
+            <div class="verification_flex verif_grid">
+              <div class="verification">Count clipboard items:</div>
+              <div class="number_flex">
+                <div class="number">4</div>
+                <div class="plus_and_minus">
+                  <div class="btn_plus">&#8743;</div>
+                  <div class="btn_minus">&#x2228;</div>
+                </div>
+              </div>
+              <div class="verification">Delete duplicates:</div>
+              <div class="confirm"><p>&#x2713;</p></div>
+            </div>
+          </div>
         </div>
       </section>
     </div>
+    <script src="scripts/main.js"></script>
   </body>
 </html>
