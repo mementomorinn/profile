@@ -1,0 +1,138 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  color: #d8d8d8;
+  background: #1b1b1b;
+}
+button {
+  text-decoration: none;
+  border: none;
+  font-family: inherit;
+  cursor: pointer;
+  font-size: inherit;
+  font-weight: inherit;
+}
+input,
+textarea {
+  text-decoration: none;
+  border: none;
+  outline: none;
+  font-family: inherit;
+}
+.container {
+  margin: 0 auto;
+  max-width: 85%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+  gap: 20px;
+}
+@media screen and (max-width: 1200px) {
+  .container {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+  }
+}
+.settings {
+  max-width: 650px;
+  width: 100%;
+  border: 2px solid #d8d8d8;
+  background: #131313;
+}
+.settings_content {
+  padding: 20px;
+}
+.content_top {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.section_title {
+  border-bottom: 2px solid #d8d8d8;
+
+  padding: 5px 0 5px 25px;
+  font-weight: bold;
+  position: relative;
+}
+.icon_container {
+  max-width: 147px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 10px 10px 0;
+}
+.icon {
+  width: 142px;
+  height: 142px;
+  border: 2px solid #d8d8d8;
+  margin-bottom: 10px;
+}
+.change_btn {
+  background: #616161;
+  border: 2px solid #d8d8d8;
+  color: #fff;
+  padding: 5px;
+}
+.since {
+  margin-bottom: 10px;
+}
+.about_container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.login {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.about_yourself {
+  display: flex;
+  align-items: flex-start;
+}
+.about_yourself textarea {
+  height: 110px;
+}
+.warning {
+  border: 2px solid #d8d8d8;
+  padding: 5px 10px 10px 10px;
+}
+
+.settings_content input,
+textarea {
+  padding: 5px;
+  background: #616161;
+  color: #fff;
+  border: 2px solid #d8d8d8;
+  margin-right: 5px;
+  width: 100%;
+}
+
+@media screen and (max-width: 600px) {
+  .icon {
+    width: 99px;
+    height: 99px;
+  }
+  .about_yourself textarea {
+    height: 68px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .login {
+    justify-content: space-between;
+    flex-direction: column;
+  }
+  .settings_content input,
+  textarea {
+    margin-bottom: 5px;
+  }
+  .about_yourself {
+    position: relative;
+    left: -109px;
+    flex-direction: row-reverse;
+  }
+}
